@@ -22,7 +22,7 @@ layout: base
                         {{ page.more-info | markdownify }}
                     {% endif %}
                     {% if page.quote %}
-                        <div>
+                        <div class="quote">
                           <blockquote cite="{{ page.quote.link }}">
                               {{ page.quote.text | markdownify }}
                           </blockquote>

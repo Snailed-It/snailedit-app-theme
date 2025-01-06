@@ -196,7 +196,7 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  
+
   @media screen and (min-width: $on-xlarge) {
     scale: 1.1;
     padding-top: 3em;
@@ -279,11 +279,15 @@ body {
     .more-info {
       p {
         margin-bottom: unset;
-        font-size: 90%;
+        font-size: 80%;
       }
 
-      blockquote {
+      .quote {
+        padding-top: 2em;
 
+        blockquote {
+          border-left-color: var(--primary-border-color)
+        }
       }
     }
   }

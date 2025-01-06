@@ -1,7 +1,5 @@
 <div class="feature-grid">
-
     {% for feature in site.data.features %}
-
     {% if feature.title %}
     <div class="feature">
         <div class="feature-icon">
@@ -14,13 +12,9 @@
             <h3>
                 {{ feature.title }}
             </h3>
-            <p>
-                {{ feature.description }}
-            </p>
+            {{ feature.description | markdownify }}
         </div>
     </div>
     {% endif %}
-
     {% endfor %}
-
 </div>
