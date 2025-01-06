@@ -279,7 +279,6 @@ body {
     .more-info {
       p {
         margin-bottom: unset;
-        font-size: 80%;
       }
 
       .quote {
@@ -509,4 +508,8 @@ body {
       }
     }
   }
+}
+
+.footnotes {
+  font-size: 90%;
 }
