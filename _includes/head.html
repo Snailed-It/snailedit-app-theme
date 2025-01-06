@@ -1,0 +1,50 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.title -%}
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
+  {%- else -%}
+  <title>{{ site.title }}</title>
+  <meta property="og:title" content="{{ site.title }}" />
+  {%- endif %}
+  <meta property="og:site_name" content="{{ site.title }}" />
+  {% if page.meta_image -%}
+  <meta property="og:image" content="{{ page.meta_image | absolute_url }}" />
+  {%- else -%}
+  <meta property="og:image" content="{{ site.meta_image | absolute_url }}" />
+  {%- endif %}
+  {% if page.desc -%}
+  <meta property="og:description" content="{{ page.desc }}" />
+  {%- else -%}
+  <meta property="og:description" content="{{ site.description }}" />
+  {%- endif %}
+  {% if site.appstore_id -%}
+  <meta name="apple-itunes-app" content="app-id={{ site.appstore_id }}{% if page.app-argument %} app-argument={{ page.app-argument }}{% endif %}">
+  {%- endif %}
+  <link rel="canonical" href="{{ page.url |  absolute_url }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: "%s" }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/all.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/brands.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/duotone.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/fontawesome.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/light.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/regular.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-duotone-solid.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-light.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-regular.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-solid.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-thin.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/solid.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/svg-with-js.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/thin.min.css' | relative_url }}">
+  <link rel="me external nofollow" href="{{ site.social.mastodon_url }}">
+  <meta name="fediverse:creator" content="{{ site.social.mastodon_user }}">
+  {%- feed_meta -%}
+
+  {%- include custom-head.html -%}
+  
+</head>

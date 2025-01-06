@@ -1,0 +1,26 @@
+<div class="feature-grid">
+
+    {% for feature in site.data.features %}
+
+    {% if feature.title %}
+    <div class="feature">
+        <div class="feature-icon">
+            <span class="fa-stack fa-2x">
+                <i class="iconBack fa-solid fa-square fa-stack-2x"></i>
+                <i class="iconTop {{ feature.fontawesome_icon_name }} fa-stack-1x"></i>
+            </span>
+        </div>
+        <div class="feature-text">
+            <h3>
+                {{ feature.title }}
+            </h3>
+            <p>
+                {{ feature.description }}
+            </p>
+        </div>
+    </div>
+    {% endif %}
+
+    {% endfor %}
+
+</div>

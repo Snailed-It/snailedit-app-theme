@@ -1,0 +1,38 @@
+---
+layout: base
+---
+<div class="landing">
+    <div class="preview">
+        <img src="{{ site.primary_screenshot.light | relative_url }}" class="light-theme">
+        <img src="{{ site.primary_screenshot.dark | relative_url }}" class="dark-theme">
+    </div>
+    <div class="app-details">
+        <div class="details">
+            <img class="app-icon" src="{{ '/assets/app-icon.png' | relative_url }}">
+            <div class="app-info">
+                <h1>{{ site.title }}</h1>
+                <p class="justify-text">{{ site.description }}</p>
+                <p>
+                    <a href="{{ site.appstore_link }}">
+                        <img class="app-download" src="{{ '/assets/appstore.png' | relative_url }}">
+                    </a>
+                </p>
+                <div class="more-info">
+                    {% if page.more-info %}
+                        {{ page.more-info | markdownify }}
+                    {% endif %}
+                    {% if page.quote %}
+                        <div>
+                          <blockquote cite="{{ page.quote.link }}">
+                              {{ page.quote.text | markdownify }}
+                          </blockquote>
+                            <p>—{{ page.quote.author }}, <cite><a href="{{ page.quote.link }}">{{ page.quote.attribution }}</a></cite></p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include features.html %}
+{{ content }}

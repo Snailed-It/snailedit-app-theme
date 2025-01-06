@@ -1,0 +1,59 @@
+<footer class="site-footer h-card">
+    <div class="footer-border">
+        <div class="wrapper">
+            {%- assign page_paths = site.pages | where_exp: "menu_page", "menu_page.footer_menu > 0" | sort:
+            "footer_menu" -%}
+            {%- assign menu_size = page_paths | size -%}
+            {%- if menu_size > 0 -%}
+                <nav class="footer-menu">
+                    {% for menu_page in page_paths %}
+                        {%- unless menu_page.url == page.url -%}
+                            <a class="page-link" href="{{ menu_page.url | relative_url }}">
+                            {%- else -%}
+                            <span class="page-link">
+                        {%- endunless -%}
+                        {%- if menu_page.icon -%}
+                            <i class="{{ menu_page.icon }}"></i>&nbsp;
+                        {%- endif -%}
+                        {{- menu_page.title -}}
+                        {%- unless menu_page.url == page.url -%}
+                            </a>
+                            {%- else -%}
+                            </span>
+                        {%- endunless -%}
+                    {% endfor %}
+                </nav>
+            {%- endif %}
+        </div>
+    </div>
+    <div class="footer-border">
+        <div class="wrapper">
+            <div class="snailedit-app-list">
+                Our other apps:
+                <menu class="app-list">
+                    {% for app in site.data.app_list %}
+                        {% if app.title != site.title %}
+                            <li class="app" id="{{ app.title | prepend: 'app ' | slugify }}">
+                                <a href="{{ app.url }}"><img src="{{ app.icon }}" alt="{{ app.title }} App Icon"/></a>
+                                <a href="{{ app.url }}">{{ app.title }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </menu>
+            </div>
+        </div>
+    </div>
+    <div class="footer-border">
+        <div class="wrapper">
+            <div class="site-footer-inner">
+            <span class="icon">
+                <object data="{{ '/assets/snail.svg' | relative_url }}" style="width: 50px; height: 20px"
+                        type="image/svg+xml"></object>
+            </span>
+                <span class="details">
+                Snailed It Development Ltd (Company No. 13620216) is registered in England and Wales at <span
+                            class="no-break">7 Bell Yard, London, WC2A 2JR.</span>
+            </span>
+            </div>
+        </div>
+</footer>

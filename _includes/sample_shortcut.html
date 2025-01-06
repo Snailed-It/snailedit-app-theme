@@ -1,0 +1,15 @@
+<div class="sample-shortcut {%- if include.border %} sample-shortcut-border{% endif %}" id="{{ include.id }}">
+    <div class="icon">
+        <a href="{{ include.shortcut.url }}">
+            <img src="/assets/shortcuts_icon.png" class="shortcuts-icon"  alt="Shortcuts App Icon"/>
+        </a>
+    </div>
+    <div class="details">
+        <{{ include.header }}>{{ shortcut.name }}</{{include.header}}>
+        {{ shortcut.description | markdownify }}
+        <p><small><a href="{{ shortcut.url }}"><i class="fa-solid fa-download"></i></a>&nbsp;<a href="{{ shortcut.url }}">Download the Shortcut</a></small></p>
+    </div>
+</div>
+{% unless include.hide_hr %}
+<hr class="shortcut-break" />
+{% endunless %}

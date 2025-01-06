@@ -1,0 +1,39 @@
+---
+layout: base
+---
+<div class="docs-page">
+    <div class="docs-content">
+        <h1><i class="{{ page.icon -}}"></i>&nbsp;{{ page.title }}</h1>
+        {{ content | inject_anchors }}
+    </div>
+    <div class="docs-menu">
+        <p class="header">Docs</p>
+        <menu class="fa-ul">
+            {% for docs_page in site.docs %}
+                {%- unless docs_page.url == page.url -%}
+                    {%- assign icon_class = "fa-light fa-books" -%}
+                    {%- assign page_class = "" -%}
+                {%- else -%}
+                    {%- assign icon_class = page.icon -%}
+                    {%- assign page_class = " current-page" -%}
+                {%- endunless -%}
+                <li>
+                    <span class="fa-li {{- page_class -}}"><i class="fa-fw {{ icon_class }}"></i></span>
+                {%- unless docs_page.url == page.url -%}
+                    <a href="{{ docs_page.url | relative_url }}">
+                        {%- endunless -%}
+                        <span class="no-break {{- page_class -}}">
+                        {{- docs_page.title -}}
+                    </span>
+                        {%- unless docs_page.url == page.url -%}
+                    </a>
+                {%- else -%}
+                    <span class="table-of-contents">
+                {{ content | toc_only }}
+                </span>
+                    {%- endunless -%}
+                </li>
+            {% endfor %}
+        </menu>
+    </div>
+</div>
