@@ -522,3 +522,11 @@ body {
 .footnotes {
   font-size: 90%;
 }
+
+.highlight {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: anywhere;
+  text-wrap: auto;
+}
