@@ -1,4 +1,4 @@
-<div class="feature-grid">
+<div class="feature-grid {{ site.feature-grid-custom |  default: "feature-grid-2" }}">
     {% for feature in site.data.features %}
     {% if feature.title %}
     <div class="feature">
