@@ -33,6 +33,10 @@ layout: base
         </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
+        {% else %}
+          <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+          {{ post.content }}
+          </article>
         {%- endif -%}
       </li>
       {%- endfor -%}
