@@ -420,10 +420,15 @@ body {
 }
 
 .screenshot {
+  border-radius: 1em;
+  display: flex;
   max-height: 500px;
   margin-left: auto;
   margin-right: auto;
+
   @media screen and (min-width: $on-xlarge) {
+    padding-top: 1em;
+    padding-bottom: 1em;
     scale: 1.1;
   }
 }
