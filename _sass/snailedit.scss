@@ -80,9 +80,23 @@ body {
       }
 
       .site-nav {
-        top: unset;
-        background-color: unset;
-        border: unset;
+        top: 40px;
+        background-color: rgba($primary-app-color, 1);
+        border-color: rgba($primary-app-color, 1);
+
+        input:checked ~ .trigger {
+          background-color: rgba($primary-app-color, 1);
+        }
+
+        @media screen and (min-width: $on-medium) {
+          top: unset;
+
+          input:checked ~ .trigger {
+            background-color: revert;
+            border: revert;
+          }
+        }
+
         @media screen and (min-width: $on-medium) {
           all: unset;
           text-align: right;
