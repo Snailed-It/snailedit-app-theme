@@ -252,6 +252,7 @@ body {
 @media screen and (min-width: $on-medium) {
   .landing {
     display: grid;
+    grid-gap: 1em;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -276,8 +277,13 @@ body {
     }
 
     .app-details {
-      text-align: left;
       grid-area: app-info;
+
+      .details {
+        text-align: left;
+        display: flex;
+        flex-flow: row;
+      }
     }
   }
 }
@@ -311,6 +317,11 @@ body {
     width: 100%;
     display: flex;
     flex-flow: row;
+
+    .fa-stack {
+      width: 2em;
+      margin-right: 0.5em;
+    }
 
     h3 {
       margin-bottom: 0.25em;
@@ -537,4 +548,8 @@ article {
   margin-right: auto;
   overflow-wrap: anywhere;
   text-wrap: auto;
+}
+
+.quote-cite {
+  margin-left: 15px;
 }
