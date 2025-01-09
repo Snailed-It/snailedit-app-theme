@@ -550,6 +550,10 @@ article {
   text-wrap: auto;
 }
 
-.quote-cite {
-  margin-left: 15px;
+.quote {
+  text-align: left;
+
+  .quote-cite {
+    margin-left: 15px;
+  }
 }
