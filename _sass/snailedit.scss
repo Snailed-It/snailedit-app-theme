@@ -251,58 +251,33 @@ body {
 
 @media screen and (min-width: $on-medium) {
   .landing {
-    display: flex;
-    flex-flow: row;
-    column-gap: 1.5em;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "preview app-info";
 
-    .preview {
-      order: revert;
+    @media screen and (min-width: $on-xlarge) {
+      scale: 1.1;
+      padding-top: 3em;
     }
 
     .app-icon {
-      order: revert;
+      width: 120px;
+      height: 120px;
     }
 
-    .app-info {
-      display: flex;
-      flex-flow: column;
-      column-gap: 1.5em;
-      order: revert;
-    }
-
-    .details {
-      display: flex;
-      flex-flow: row;
-      row-gap: 1em;
-      column-gap: 1.5em;
-    }
-
-    .app-details {
-      display: flex;
-      flex-flow: column;
-      column-gap: 1.5em;
-      row-gap: 1em;
-      margin-top: 3em;
-      text-align: left;
+    .preview {
+      grid-area: preview;
     }
 
     .app-download {
       height: 75px;
-      order: revert;
     }
 
-    .more-info {
-      p {
-        margin-bottom: unset;
-      }
-
-      .quote {
-        padding-top: 2em;
-
-        blockquote {
-          border-left-color: var(--primary-border-color)
-        }
-      }
+    .app-details {
+      text-align: left;
+      grid-area: app-info;
     }
   }
 }
@@ -456,7 +431,6 @@ article {
     }
 
   }
-  
   .screenshot-rounded {
     border-radius: 1em;
   }
