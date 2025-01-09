@@ -431,9 +431,12 @@ body {
 }
 
 article {
+  p:has(.screenshot),
+  p:has(.screenshot-rounded), {
+    text-align: center;
+  }
   .screenshot,
   .screenshot-rounded {
-    display: flex;
 
     @media screen and (min-width: $on-xlarge) {
       margin-top: 1em;
