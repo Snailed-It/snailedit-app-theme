@@ -53,7 +53,7 @@ body {
 
   > header {
     grid-area: header;
-    height: 115px;
+    height: 5em;
     display: inline-grid;
     background: var(--primary-app-color);
 
@@ -80,7 +80,7 @@ body {
       }
 
       .site-nav {
-        top: 40px;
+        top: 1.5em;
         background-color: rgba($primary-app-color, 1);
         border-color: rgba($primary-app-color, 1);
 
