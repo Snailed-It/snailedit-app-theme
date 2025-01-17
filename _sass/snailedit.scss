@@ -211,7 +211,6 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  gap: 1em;
 
   @media screen and (min-width: $on-xlarge) {
     scale: 1.1;
@@ -284,6 +283,7 @@ body {
         text-align: left;
         display: flex;
         flex-flow: row;
+        gap: 1em;
       }
     }
   }
