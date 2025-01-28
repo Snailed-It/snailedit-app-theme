@@ -56,19 +56,19 @@
   {% feed_meta %}
   <link rel="canonical" href="{{ page.url |  absolute_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: "%s" }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/all.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/brands.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/duotone.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/fontawesome.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/light.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/regular.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-duotone-solid.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-light.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-regular.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-solid.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/sharp-thin.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/solid.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/svg-with-js.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/fontawesome/css/thin.min.css' | relative_url }}">
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/all.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/brands.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/duotone.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/fontawesome.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/light.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/regular.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/sharp-duotone-solid.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/sharp-light.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/sharp-regular.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/sharp-solid.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/sharp-thin.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/solid.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/svg-with-js.min.css" %}
+  {% include deferred_css_link.html asset_path="/assets/fontawesome/css/thin.min.css" %}
   <link rel="me external nofollow" href="{{ site.social.mastodon_url }}">
 </head>
