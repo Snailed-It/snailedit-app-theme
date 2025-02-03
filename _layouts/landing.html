@@ -13,7 +13,7 @@ layout: base
                 <h1>{{ site.title }}</h1>
                 <p class="justify-text">{{ site.description }}</p>
                 <p>
-                    <a href="{{ site.appstore_link }}">
+                    <a href="{{ site.appstore_link }}" {% if site.fathom_site_id %} onclick="fathom.trackEvent('App Store link: {{ site.title }}'); {% endif %}">
                         <img class="app-download" src="{{ '/assets/appstore.png' | relative_url }}">
                     </a>
                 </p>
