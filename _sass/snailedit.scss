@@ -7,7 +7,93 @@
   --fa-li-width: 0.5em;
   --fa-primary-color: var(--primary-app-color);
   --fa-secondary-color: var(--secondary-app-color);
+
+  // Apple System colors
+  --apple-system-red: rgb(255, 59, 48);
+  --apple-system-orange: rgb(255, 149, 0);
+  --apple-system-yellow: rgb(255, 204, 0);
+  --apple-system-green: rgb(52, 199, 89);
+  --apple-system-mint: rgb(0, 19, 190);
+  --apple-system-teal: rgb(48, 176, 199);
+  --apple-system-cyan: rgb(50, 173, 230);
+  --apple-system-blue: rgb(0, 122, 255);
+  --apple-system-indigo: rgb(88, 86, 214);
+  --apple-system-purple: rgb(175, 82, 222);
+  --apple-system-pink: rgb(255, 45, 85);
+  --apple-system-brown: rgb(162, 132, 94);
+  
+  --apple-system-red-accessible: rgb(215, 0, 21);
+  --apple-system-orange-accessible: rgb(201, 52, 0);
+  --apple-system-yellow-accessible: rgb(178, 80, 0);
+  --apple-system-green-accessible: rgb(36, 138, 61);
+  --apple-system-mint-accessible: rgb(12, 129, 123);
+  --apple-system-teal-accessible: rgb(0, 130, 153);
+  --apple-system-cyan-accessible: rgb(0, 113, 164);
+  --apple-system-blue-accessible: rgb(0, 64, 221);
+  --apple-system-indigo-accessible: rgb(54, 52, 163);
+  --apple-system-purple-accessible: rgb(137, 68, 171);
+  --apple-system-pink-accessible: rgb(211, 15, 69);
+  --apple-system-brown-accessible: rgb(127, 101, 69);
 }
+    
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Apple System colors
+    --apple-system-red: rgb(255, 69, 58);
+    --apple-system-orange: rgb(255, 159, 10);
+    --apple-system-yellow: rgb(255, 214, 10);
+    --apple-system-green: rgb(48, 209, 88);
+    --apple-system-mint: rgb(99, 230, 226);
+    --apple-system-teal: rgb(64, 200, 224);
+    --apple-system-cyan: rgb(100, 210, 255);
+    --apple-system-blue: rgb(10, 132, 255);
+    --apple-system-indigo: rgb(94, 92, 230);
+    --apple-system-purple: rgb(191, 90, 242);
+    --apple-system-pink: rgb(255, 55, 95);
+    --apple-system-brown: rgb(172, 142, 104);
+
+    --apple-system-red-accessible: rgb(255, 105, 97);
+    --apple-system-orange-accessible: rgb(255, 179, 64);
+    --apple-system-yellow-accessible: rgb(255, 212, 38);
+    --apple-system-green-accessible: rgb(48, 219, 91);
+    --apple-system-mint-accessible: rgb(102, 212, 207);
+    --apple-system-teal-accessible: rgb(93, 230, 255);
+    --apple-system-cyan-accessible: rgb(112, 215, 255);
+    --apple-system-blue-accessible: rgb(64, 156, 255);
+    --apple-system-indigo-accessible: rgb(125, 122, 255);
+    --apple-system-purple-accessible: rgb(218, 143, 255);
+    --apple-system-pink-accessible: rgb(255, 100, 130);
+    --apple-system-brown-accessible: rgb(181, 148, 105);
+  }
+}
+
+
+// Apple System colors
+$appleSystemRed: var(--apple-system-red);
+$appleSystemOrange: var(--apple-system-orange);
+$appleSystemYellow: var(--apple-system-yellow);
+$appleSystemGreen: var(--apple-system-green);
+$appleSystemMint: var(--apple-system-mint);
+$appleSystemTeal: var(--apple-system-teal);
+$appleSystemCyan: var(--apple-system-cyan);
+$appleSystemBlue: var(--apple-system-blue);
+$appleSystemIndigo: var(--apple-system-indigo);
+$appleSystemPurple: var(--apple-system-purple);
+$appleSystemPink: var(--apple-system-pink);
+$appleSystemBrown: var(--apple-system-brown);
+
+$appleSystemRed: var(--apple-system-red-accessible);
+$appleSystemOrange: var(--apple-system-orange-accessible);
+$appleSystemYellow: var(--apple-system-yellow-accessible);
+$appleSystemGreen: var(--apple-system-green-accessible);
+$appleSystemMint: var(--apple-system-mint-accessible);
+$appleSystemTeal: var(--apple-system-teal-accessible);
+$appleSystemCyan: var(--apple-system-cyan-accessible);
+$appleSystemBlue: var(--apple-system-blue-accessible);
+$appleSystemIndigo: var(--apple-system-indigo-accessible);
+$appleSystemPurple: var(--apple-system-purple-accessible);
+$appleSystemPink: var(--apple-system-pink-accessible);
+$appleSystemBrown: var(--apple-system-brown-accessible);
 
 @media (prefers-color-scheme: dark) {
   .dark-theme {
