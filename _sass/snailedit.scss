@@ -136,6 +136,13 @@ body {
   "footer";
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
+  scrollbar-color: $primary-app-color $background-color;
+  ::-webkit-scrollbar-thumb {
+    background: $primary-app-color; /* Scrollbar handle color */
+  }
+  ::-webkit-scrollbar-track {
+    background: $background-color; /* Background of the scrollbar track */
+  }
 
   > header {
     grid-area: header;
